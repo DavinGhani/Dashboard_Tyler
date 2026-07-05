@@ -18,7 +18,7 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../Dataset/Tyler_Dashboard_V12.csv")
+    df = pd.read_csv("Dataset/Tyler_Dashboard_V12.csv")
     return df
 
 # Memuat dataset
@@ -426,7 +426,7 @@ if data_loaded:
         with col_peta:
             try:
                 # Membaca file JSON 
-                with open("../Graph/bertopic_map_7.json", "r", encoding="utf-8") as f:
+                with open("Graph/bertopic_map_7.json", "r", encoding="utf-8") as f:
                     fig_map = pio.from_json(f.read())
                 
                 # Menampilkan secara native di Streamlit 
@@ -437,7 +437,7 @@ if data_loaded:
         # Kolom Kanan: Bar Chart Interaktif
         with col_bar:
             try:
-                with open("../Graph/bertopic_bar_7.json", "r", encoding="utf-8") as f:
+                with open("Graph/bertopic_bar_7.json", "r", encoding="utf-8") as f:
                     fig_bar = pio.from_json(f.read())
                 
                 # Menampilkan secara native di Streamlit
